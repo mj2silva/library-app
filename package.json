@@ -12,6 +12,7 @@
     "chalk": "^4.0.0",
     "debug": "^4.1.1",
     "express": "^4.17.1",
+    "materialize-css": "^1.0.0-rc.2",
     "morgan": "^1.10.0"
   }
 }
