@@ -4,7 +4,11 @@
   "description": "library app created for learning pruposes",
   "main": "index.js",
   "scripts": {
+    "start": "DEBUG=app node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "url": "https://github.com/msilvag1/library-app"
   },
   "author": "Manuel Silva",
   "license": "MIT",
@@ -14,5 +18,10 @@
     "express": "^4.17.1",
     "materialize-css": "^1.0.0-rc.2",
     "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2"
   }
 }
