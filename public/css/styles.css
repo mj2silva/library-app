@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat');
+
+body {
+  margin: 0;
+}
+
+.container {
+  font-family: 'Montserrat', sans-serif;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Estilos del nav bar */
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4D3B20;
+  height: 96px;
+}
+
+.nav__logo {
+  color: #fff;
+  display: block;
+  text-decoration: none;
+  margin-left: 10px;
+  font-size: 36px;
+}
+
+.nav__items {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  margin: 0;
+  font-size: 24px;
+}
+
+.nav__items li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  transition-duration: 500ms;
+}
+
+.nav__items li:hover {
+  background-color: #CC9D56;
+}
+
+.nav__items li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+/* pagepresentation */
+.presentation__wrapper {
+  background-image:
+    linear-gradient(180deg,rgba(56,216,255,0) 0%, rgb(255, 255, 255) 100%),
+    url(../img/library-home.jpg);
+  height: 384px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+}
+
+.presentation__title {
+  color: #ffffff;
+  font-size: 48px;
+}
+
+.presentation__text {
+  color: #000000;
+  font-size: 18px;
+}
+
+/* books list */
+.list__wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.list__item {
+  display: flex;
+  min-height: 256px;
+  align-items: center;
+  border: 1px #CC9D56 solid;
+  border-radius: 36px;
+  margin: 12px 0;
+}
+
+.item__img {
+  height: 128px;
+  width: 128px;
+  margin: 24px;
+  display: flex;
+  align-items: center;
+  border: 1px #CC9D56 solid;
+  border-radius: 50%;
+}
+
+.item__img img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.item__info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+}

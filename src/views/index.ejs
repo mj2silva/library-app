@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="nav">
+          <a href="#" class="nav__logo">MS Library</a>
+          <ul class="nav__items">
+            <li class="nav__item--home"><a href="/">Home</a></li>
+            <% for( let i = 0; i < nav.length; i++ ) { %>
+              <li class="nav__item">
+                <a href="<%= nav[i].href %>">
+                  <%= nav[i].title %>
+                </a>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </div>
+</body>
+</html>

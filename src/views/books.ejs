@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library App</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <nav>
+        <div class="nav">
+          <a href="#" class="nav__logo">MS Library</a>
+          <ul class="nav__items">
+            <li class="nav__item--home"><a href="/">Home</a></li>
+            <% for( let i = 0; i < nav.length; i++ ) { %>
+              <li class="nav__item">
+                <a href="<%= nav[i].href %>">
+                  <%= nav[i].title %>
+                </a>
+              </li>
+            <% } %>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section id="presentation">
+        <div class="presentation__wrapper">
+          <div class="presentation__title">
+            <h2>
+              Library
+            </h2>
+          </div>
+          <div class="presentation__text">
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+              Repellat provident quos atque, veritatis itaque quisquam, 
+              recusandae ex, at exercitationem sint debitis? Unde qui rerum 
+              quae ducimus iste, numquam inventore itaque.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section id="books-list">
+        <% for( let i = 0; i < books.length; i++ ) { %>
+          <div class="list__wrapper">
+            <div class="list__item">
+              <div class="item__img">
+                <img src="img/generic-book.png" alt="book">
+              </div>
+              <div class="item__info"> 
+                <h2 class="item__tittle"><%= books[i].title %></h2>
+                <p class="item__author"><%= books[i].author %></p>
+                <div class="item__extra-info">
+                  <a href="/books/<%= i %>" class="item__read-more">See more...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        <% } %>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
