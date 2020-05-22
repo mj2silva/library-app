@@ -25,6 +25,20 @@
         </div>
       </nav>
     </header>
+    <div class="sign-up">
+      <h2>Sign up!</h2>
+      <form name="signUpform" action="/auth/sign-up" method="POST" class="sign-up__form">
+        <label class="sign-up__item" for="username">
+          <span class="sign-up__label">Username:</span>
+          <input class="sign-up__input" type="text" id="username" name="username">
+        </label>
+        <label class="sign-up__item" for="password" >
+          <span class="sign-up__label">Password:</span>
+          <input class="sign-up__input" type="text" id="password" name="password">
+        </label>
+        <button class="sign-up__button" type="submit">Sign-up</button>
+      </form>
+    </div>
   </div>
 </body>
 </html>

@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat');
 
+:root {
+  --color-main: #810000;
+  --color-secondary-1: #ec8f00;
+  --color-secondary-2: #420e07;
+  --color-secondary-3: #002907;
+  --color-secondary-4: #292929;
+}
+
 body {
   margin: 0;
 }
@@ -17,7 +25,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #4D3B20;
+  background-color: var(--color-main);
   height: 96px;
 }
 
@@ -50,7 +58,7 @@ body {
 }
 
 .nav__items li:hover {
-  background-color: #CC9D56;
+  background-color: var(--color-secondary-2);
 }
 
 .nav__items li a {
@@ -98,7 +106,7 @@ body {
   display: flex;
   min-height: 256px;
   align-items: center;
-  border: 1px #CC9D56 solid;
+  border: 1px var(--color-secondary-2) solid;
   border-radius: 36px;
   margin: 12px 0;
 }
@@ -109,8 +117,18 @@ body {
   margin: 24px;
   display: flex;
   align-items: center;
-  border: 1px #CC9D56 solid;
+  border: 1px var(--color-secondary-2) solid;
   border-radius: 50%;
+}
+
+.item__read-more {
+  color: var(--color-secondary-3);
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.item__read-more:hover {
+  color: var(--color-secondary-1);
 }
 
 .item__img img {
@@ -123,4 +141,58 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 24px;
+}
+
+/* Sign up form */
+
+.sign-up {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: #000000 solid 1px;
+  width: 50%;
+  margin: 24px auto;
+  padding: 36px 0;
+  min-height: calc(100vh - 96px - 48px);
+  box-sizing: border-box;
+}
+
+.sign-up__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sign-up__item {
+  margin: 16px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-up__input {
+  margin: 8px 0;
+  padding: 4px 8px;
+  border: none;
+  border-bottom: #000000 solid 1px;
+}
+
+.sign-up__input:focus {
+  outline: none;
+  border-color: var(--color-main);
+}
+
+.sign-up__button {
+  background-color: var(--color-main);
+  border: none;
+  border-radius: 16px;
+  width: 80%;
+  padding: 12px 0;
+  cursor: pointer;
+  color: white;
+  transition-duration: 250ms;
+}
+
+.sign-up__button:hover {
+  background-color: var(--color-secondary-1);
+  color: #000000;
 }
