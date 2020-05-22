@@ -46,8 +46,16 @@ const getBook = async (client, bookId) => {
   return book;
 };
 
+const bookRouter = express.Router();
+
 const router = (header) => {
-  const bookRouter = express.Router();
+  bookRouter.use((req, res, next) => {
+    if (req.user) {
+      next();
+    } else {
+      res.redirect('/');
+    }
+  });
 
   bookRouter.route('/')
     .get(async (req, res) => {

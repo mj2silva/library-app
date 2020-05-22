@@ -1,8 +1,7 @@
 const express = require('express');
 
+const homeRouter = express.Router();
 const router = (header) => {
-  const homeRouter = express.Router();
-
   homeRouter.route('/')
     .get((req, res) => {
       res.render('index', {
