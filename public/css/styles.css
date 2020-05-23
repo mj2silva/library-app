@@ -141,6 +141,7 @@ body {
   display: flex;
   flex-direction: column;
   margin-left: 24px;
+  max-width: 80%;
 }
 
 /* Sign up form */
@@ -195,4 +196,8 @@ body {
 .sign-up__button:hover {
   background-color: var(--color-secondary-1);
   color: #000000;
+}
+
+.sign-up__button:active {
+  outline: none;
 }

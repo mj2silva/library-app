@@ -47,10 +47,11 @@
         <div class="list__wrapper">
           <div class="list__item">
             <div class="item__img">
-              <img src="/img/generic-book.png" alt="book">
+              <img src="<%= book.imageUrl %>" alt="book">
             </div>
             <div class="item__info"> 
               <h2 class="item__tittle"><%= book.title %></h2>
+              <p class="item__description"><%= book.description %></p>
               <p class="item__author"><%= book.author %></p>
             </div>
           </div>

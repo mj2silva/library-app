@@ -45,7 +45,7 @@ const getBook = async (client, bookId) => {
   return book;
 };
 
-const bookController = (header) => {
+const bookController = (service, header) => {
   const getIndex = async (req, res) => {
     const client = await MongoClient.connect(url);
     const books = await getBooks(client);
@@ -58,6 +58,9 @@ const bookController = (header) => {
     const { id } = req.params;
     const client = await MongoClient.connect(url);
     const book = await getBook(client, id);
+    const { description, image_url: imageUrl } = await service.getBookById(book.bookId);
+    book.description = description;
+    book.imageUrl = imageUrl;
     res.render('singleBook', {
       ...header,
       book,
